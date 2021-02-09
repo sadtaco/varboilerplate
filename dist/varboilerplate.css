@@ -1,0 +1,131 @@
+:root {
+	--font-family: 'Roboto', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+	--font-family-alternate: 'Gotham Rounded A', 'Gotham Rounded B', 'Helvetica Neue', 'Arial', sans-serif;
+
+	--font-weight: 400;
+	--font-weight-bold: 700;
+
+	--darkest: #161f22;
+	--lightest: #f5f3f0;
+
+	--light-bg-font-color: #161f22;
+	--dark-bg-font-color: #f5f3f0;
+
+	--bg-darkest: #362f32;
+	--bg-dark: #4a4c52;
+	--bg-light: #e6e3df;
+	--bg-lightest: #f5f3f0;
+
+	--button-and-anchor-color: #09d;
+
+	--button-border-radius: 0.7rem;
+	--input-border-radius: 0.7rem;
+}
+
+html {
+	font-family: var(--font-family);
+	/* Default (Extra small screens). 1rem = 7px */
+	font-size: percentage(7 / 16);
+
+	@media (min-width: 768px) {
+		/* Small screens. 1rem = 8px */
+		font-size: percentage(8 / 16);
+	}
+
+	@media (min-width: 992px) {
+		/* Medium screens. 1rem = 9px */
+		font-size: percentage(9 / 16);
+	}
+
+	@media (min-width: 1200px) {
+		/* Large screens. 1rem = 10px */
+		font-size: percentage(10 / 16);
+	}
+}
+body {
+	font-size: 1.8em;
+}
+
+h1 {
+	font-size: 3.6rem;
+}
+h2 {
+	font-size: 3.2rem;
+}
+h3 {
+	font-size: 3rem;
+}
+h4 {
+	font-size: 2.4rem;
+}
+h5 {
+	font-size: 2rem;
+}
+h6 {
+	font-size: 1.8rem;
+}
+
+.alternate-font {
+	font-family: var(--font-family-alternate)
+}
+
+.input, input[type="text"], input[type="textarea"] {
+	box-shadow: 0px 0px 0px 0.5px rgb(50 50 93 / 10%), 0px 2px 5px 0px rgb(50 50 93 / 10%), 0px 1px 1.5px 0px rgb(0 0 0 / 7%);
+	border-radius: 0.6rem;
+	border-radius: var(--input-border-radius);
+}
+a, button, input[type="button"] {
+	cursor: pointer;
+}
+
+a.button, button, input[type="button"] {
+	background: var(--button-and-anchor-color);
+	color: var(--dark-bg-font-color);
+	border-radius: var(--button-border-radius);
+}
+
+.dark-bg {
+	background-color: var(--bg-dark);
+}
+.darkest-bg {
+	background-color: var(--bg-darkest);
+}
+.dark-bg, .darkest-bg {
+	color: var(--dark-bg-font-color);
+}
+.light-bg {
+	background-color: var(--bg-light);
+}
+.lightest-bg {
+	background-color: var(--bg-lightest);
+}
+.light-bg, .lightest-bg {
+	color: var(--light-bg-font-color);
+}
+
+.clear-bg {
+	background: transparent;
+}
+.clear-border {
+	border-color: transparent;
+}
+
+.light-bg a.button.clear-bg:not(.light-bg .dark-bg a.button),
+.light-bg button.clear-bg:not(.light-bg .dark-bg button),
+.light-bg input[type="button"].clear-bg:not(.light-bg .dark-bg input[type="button"]) {
+	color: var(--light-bg-font-color);
+}
+
+.row {
+	display: flex;
+	flex-direction: column;
+	padding: 0;
+	width: 100%;
+}
+.row .col {
+	display: block;
+	flex: 1 1 auto;
+	margin-left: 0;
+	max-width: 100%;
+	width: 100%;
+}

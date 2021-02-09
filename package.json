@@ -1,0 +1,28 @@
+{
+  "name": "varboilerplate",
+  "version": "0.0.1",
+  "description": "simple boilerplate using css vars and rem units",
+  "main": "./dist/varboilerplate.css",
+  "scripts": {
+    "test": "echo \"Testing\"",
+	"build": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sadtaco/varboilerplate.git"
+  },
+  "keywords": [
+    "var",
+    "css",
+    "rem"
+  ],
+  "author": "sadtaco",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/sadtaco/varboilerplate/issues"
+  },
+  "homepage": "https://github.com/sadtaco/varboilerplate#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  }
+}
